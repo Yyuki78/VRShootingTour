@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3663927942730321509}
   - component: {fileID: 1112712540610960453}
   - component: {fileID: 1112712540610960452}
+  - component: {fileID: 5741552906755267544}
   m_Layer: 0
   m_Name: polySurface1
   m_TagString: Untagged
@@ -128,7 +129,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -146,6 +147,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5597002278806442958, guid: 557dadd9a4da99d4c84d13c3cea9ba6a, type: 3}
+--- !u!114 &5741552906755267544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378190145349206404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3154a4c69f5ea42a213f98657c3558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3499388659234053201
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +172,7 @@ GameObject:
   - component: {fileID: 3020083477584384852}
   - component: {fileID: 1112712541172106924}
   - component: {fileID: 1112712541172106923}
+  - component: {fileID: 267210793289714786}
   m_Layer: 0
   m_Name: polySurface2
   m_TagString: Untagged
@@ -241,7 +255,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -259,6 +273,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -4545423930167495100, guid: 557dadd9a4da99d4c84d13c3cea9ba6a, type: 3}
+--- !u!114 &267210793289714786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499388659234053201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3154a4c69f5ea42a213f98657c3558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4520282310928070699
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +298,7 @@ GameObject:
   - component: {fileID: 5627464989191796782}
   - component: {fileID: 1112712542005644861}
   - component: {fileID: 1112712542005644860}
+  - component: {fileID: 4720201023763090081}
   m_Layer: 0
   m_Name: polySurface3
   m_TagString: Untagged
@@ -354,7 +381,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -372,3 +399,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2381890483179193753, guid: 803961891173a824e92ae50738284cf7, type: 3}
+--- !u!114 &4720201023763090081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520282310928070699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3154a4c69f5ea42a213f98657c3558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
