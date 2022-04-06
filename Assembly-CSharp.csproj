@@ -74,6 +74,8 @@
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <Compile Include="Assets\Scripts\HitSter.cs" />
+    <Compile Include="Assets\Scripts\TargetBreak.cs" />
+    <Compile Include="Assets\Scripts\TargetManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SAColliderBuilder\Readme_en.txt" />

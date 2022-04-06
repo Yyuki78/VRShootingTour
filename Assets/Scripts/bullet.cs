@@ -8,6 +8,9 @@ public class bullet : MonoBehaviour
     [SerializeField] float speed = 20f; //弾速[m/s]
 
     private float limit = 5.0f;
+    private float countup = 0f;
+
+    private Vector3 forward;
 
     [SerializeField] ParticleSystem hitParticlePrefab;//着弾時演出プレハブ
 
@@ -34,14 +37,27 @@ public class bullet : MonoBehaviour
         _rigid = GetComponent<Rigidbody>();
         //Shooting();
         */
-        Invoke(nameof(Invisible), limit);
+        //Invoke(nameof(Invisible), limit);
+        SetForward();
     }
 
     private void Update()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += forward * speed * Time.deltaTime;
+        
+        //時間をカウントする
+        countup += Time.deltaTime;
+        if (countup >= limit)
+        {
+            Invisible();
+        }
     }
 
+    public void SetForward()
+    {
+        forward = transform.forward;
+    }
+    /*
     public IEnumerator TimeOver()
     {
         yield return new WaitForSeconds(limit);
@@ -76,6 +92,7 @@ public class bullet : MonoBehaviour
     {
         //var velocity = speed * transform.forward;
         //_rigid.AddForce(-velocity, ForceMode.VelocityChange);
+        countup = 0f;
         //何かに衝突するor制限時間を超えたら非アクティブにする
         gameObject.SetActive(false);
     }

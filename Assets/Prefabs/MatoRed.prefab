@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647286156178095891}
-  m_Layer: 0
+  - component: {fileID: 675654636}
+  m_Layer: 7
   m_Name: MatoRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +34,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &675654636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265800307902358953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c882218981c634aa74eff8dc1ba8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378190145349206404
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,7 +60,7 @@ GameObject:
   - component: {fileID: 1112712540610960453}
   - component: {fileID: 1112712540610960452}
   - component: {fileID: 5741552906755267544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +186,7 @@ GameObject:
   - component: {fileID: 1112712541172106924}
   - component: {fileID: 1112712541172106923}
   - component: {fileID: 267210793289714786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: polySurface2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +312,7 @@ GameObject:
   - component: {fileID: 1112712542005644861}
   - component: {fileID: 1112712542005644860}
   - component: {fileID: 4720201023763090081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

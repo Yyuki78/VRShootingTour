@@ -62,8 +62,10 @@ public class Shooter : MonoBehaviour
                 t.SetPositionAndRotation(pos, rotation);
                 //アクティブにする
                 t.gameObject.SetActive(true);
+                
                 _shoot = t.gameObject.GetComponent<bullet>();
-                StartCoroutine(_shoot.TimeOver());
+                //StartCoroutine(_shoot.TimeOver());
+                _shoot.SetForward();
                 return;
             }
         }
