@@ -70,7 +70,7 @@ public class GameStateController : MonoBehaviour
         public override StateAction OnUpdate()
         {
             timer += Time.deltaTime;
-            // 1•bŒã‚ÉŽŸ‚Ö
+            // 2•bŒã‚ÉŽŸ‚Ö
             if (timer > 2.0f)
             {
                 return StateAction.STATE_ACTION_NEXT;

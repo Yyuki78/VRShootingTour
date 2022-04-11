@@ -8,27 +8,10 @@ public class TargetManager : MonoBehaviour
     [SerializeField] GameObject TartgetBlue;
     [SerializeField] GameObject TartgetBlack;
 
-    public int GeneNum = 100;//“I‚ğ¶¬‚·‚é”
-
     public int d = 10;//¶¬‹——£
     private int n = 0;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        for(int i = 0; i < GeneNum; i++)
-        {
-            GenerateTartget();
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void GenerateTartget()
+    public void GenerateTartget(float size)
     {
         
         var theta = Random.Range(0, Mathf.PI);
@@ -51,20 +34,25 @@ public class TargetManager : MonoBehaviour
         var Rotation = Quaternion.identity;
 
         int color = Random.Range(0, 3);
+        GameObject ins;
         switch (color)
         {
             case 0:
-                Instantiate(TartgetRed, Transform, Rotation, this.gameObject.transform);
+                ins = Instantiate(TartgetRed, Transform, Rotation, this.gameObject.transform);
+                ins.transform.localScale = new Vector3(size / 10f, size / 10f, size / 10f);
                 break;
             case 1:
-                Instantiate(TartgetBlue, Transform, Rotation, this.gameObject.transform);
+                ins = Instantiate(TartgetBlue, Transform, Rotation, this.gameObject.transform);
+                ins.transform.localScale = new Vector3(size / 10f, size / 10f, size / 10f);
                 break;
             case 2:
-                Instantiate(TartgetBlack, Transform, Rotation, this.gameObject.transform);
+                ins = Instantiate(TartgetBlack, Transform, Rotation, this.gameObject.transform);
+                ins.transform.localScale = new Vector3(size / 10f, size / 10f, size / 10f);
                 break;
             default:
                 Debug.Log("Target‚ÌcolorŒˆ‚ß‚ªo—ˆ‚Ä‚Ü‚¹‚ñ");
                 break;
         }
+        
     }
 }

@@ -6,11 +6,11 @@ using System.Linq;
 public class TargetBreak : MonoBehaviour
 {
     private bool Hit = false;
-    private TargetManager _manager;
+    private ShootingGameManager _manager;
 
     private void Start()
     {
-        _manager = GetComponentInParent<TargetManager>();
+        _manager = GetComponentInParent<ShootingGameManager>();
         transform.LookAt(_manager.gameObject.transform.position);
         var rotation= Random.Range(0, 360);
         transform.Rotate(new Vector3(0, 0, rotation));
@@ -30,12 +30,13 @@ public class TargetBreak : MonoBehaviour
             r.AddForce(vect, ForceMode.Impulse);
             r.AddTorque(vect, ForceMode.Impulse);
         });
+        this.gameObject.AddComponent<AutoDestroy>().time = 2f;
         if (Hit == false)
         {
             Hit = true;
             Debug.Log("Hit");
+            _manager.HitTarget();
         }
-        _manager.GenerateTartget();
         //Destroy(gameObject);
     }
 }

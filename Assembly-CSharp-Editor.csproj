@@ -319,6 +319,12 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
@@ -741,6 +747,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{CC368C15-06FE-BAD0-41E2-0E29D68D9C94}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{2B2867DD-F2A1-A4B0-C15C-4FF30F0FA1A2}</Project>
       <Name>Assembly-CSharp</Name>

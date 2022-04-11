@@ -15,33 +15,40 @@ public class Shooter : MonoBehaviour
 
     private float shotInterval;
 
+    //連射機能
+    public bool Auto = false;
+
     private void Start()
     {
         //弾を保持する空のオブジェクトを生成
         bullets = gunBarrelEnd.transform;
+        Auto = false;
     }
 
     void Update()
     {
-        /*
-        bullets = gunBarrelEnd.transform;
-        shotInterval += 1;
-
-        if (shotInterval % 5 == 0)
+        if (Auto == false)
         {
             //入力に応じて弾を発射する
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButtonDown("Fire1") && shotInterval < 0)
             {
+                shotInterval = 5;
                 Shoot(bullets.position, bullets.rotation);
             }
-        }*/
-
-        shotInterval--;
-        //入力に応じて弾を発射する
-        if (Input.GetButtonDown("Fire1") && shotInterval < 0)
+            shotInterval--;
+        }
+        else
         {
-            shotInterval = 5;
-            Shoot(bullets.position, bullets.rotation);
+            //bullets = gunBarrelEnd.transform;
+            shotInterval += 1;
+            if (shotInterval % 5 == 0)
+            {
+                //入力に応じて弾を発射する
+                if (Input.GetButton("Fire1"))
+                {
+                    Shoot(bullets.position, bullets.rotation);
+                }
+            }
         }
     }
 
