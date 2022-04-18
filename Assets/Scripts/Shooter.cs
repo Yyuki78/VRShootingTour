@@ -18,11 +18,15 @@ public class Shooter : MonoBehaviour
     //連射機能
     public bool Auto = false;
 
+    //撃った数　ShootingGameManagerで変更
+    public int ShotNum = 0;
+
     private void Start()
     {
         //弾を保持する空のオブジェクトを生成
         bullets = gunBarrelEnd.transform;
         Auto = false;
+        ShotNum = 0;
     }
 
     void Update()
@@ -59,6 +63,9 @@ public class Shooter : MonoBehaviour
 
         //発射時の音を再生
         gunAudioSource.Play();
+
+        //撃った数を増やす
+        ShotNum++;
 
         //アクティブでないオブジェクトをbulletsの中から探索
         foreach (Transform t in Bullets)

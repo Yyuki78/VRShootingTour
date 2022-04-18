@@ -42,12 +42,17 @@ public class ShootingGameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _brokeText;
     [SerializeField] TextMeshProUGUI _brokeNumText;
 
+    public float HitRate = 0f;//ñΩíÜó¶
+    private bool once = true;
+
     // Start is called before the first frame update
     void Start()
     {
         _state = GameState.GetComponent<GameStateController>();
         _manager = GameSetting.GetComponent<GameSettingManager>();
         _target = GetComponent<TargetManager>();
+        _shooter1 = PlayerGunRight.GetComponent<Shooter>();
+        _shooter2 = PlayerGunLeft.GetComponent<Shooter>();
         GameMode = _manager.GameMode;
         switch (GameMode)
         {
@@ -70,8 +75,6 @@ public class ShootingGameManager : MonoBehaviour
             case 3:
                 if (_manager.Cheat)
                 {
-                    _shooter1 = PlayerGunRight.GetComponent<Shooter>();
-                    _shooter2 = PlayerGunLeft.GetComponent<Shooter>();
                     _shooter1.Auto = true;
                     _shooter2.Auto = true;
                 }
@@ -90,6 +93,8 @@ public class ShootingGameManager : MonoBehaviour
         {
             _target.GenerateTartget(Size);
         }
+        _shooter1.ShotNum = 0;
+        _shooter2.ShotNum = 0;
     }
 
     // Update is called once per frame
@@ -161,6 +166,11 @@ public class ShootingGameManager : MonoBehaviour
         {
             //ÉQÅ[ÉÄèIóπ
             _state.FinishGame = true;
+        }
+        if (_state.FinishGame == true && once == true)
+        {
+            HitRate = breakNum * 100f / (_shooter1.ShotNum + _shooter2.ShotNum);
+            once = false;
         }
     }
 
