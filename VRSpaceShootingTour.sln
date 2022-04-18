@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{CC368C15-06FE-BAD0-41E2-0E29D68D9C94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopoCopo.TextMeshProAnimator.Runtime", "CopoCopo.TextMeshProAnimator.Runtime.csproj", "{918FE5E7-886F-4995-F85D-2F1B957DB389}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{D40AF5D7-D608-2504-C15F-F0F296EDBC62}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{CC368C15-06FE-BAD0-41E2-0E29D68D9C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC368C15-06FE-BAD0-41E2-0E29D68D9C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC368C15-06FE-BAD0-41E2-0E29D68D9C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918FE5E7-886F-4995-F85D-2F1B957DB389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918FE5E7-886F-4995-F85D-2F1B957DB389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918FE5E7-886F-4995-F85D-2F1B957DB389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918FE5E7-886F-4995-F85D-2F1B957DB389}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D40AF5D7-D608-2504-C15F-F0F296EDBC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D40AF5D7-D608-2504-C15F-F0F296EDBC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D40AF5D7-D608-2504-C15F-F0F296EDBC62}.Release|Any CPU.ActiveCfg = Release|Any CPU

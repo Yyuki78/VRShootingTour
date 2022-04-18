@@ -7,6 +7,7 @@ public class GameStateController : MonoBehaviour
     
     [SerializeField] GameObject gameReady;  // GameReady ゲームオブジェクト参照
     [SerializeField] GameObject gameStart;  // GameStart ゲームオブジェクト参照
+    [SerializeField] GameObject gameUI;
     [SerializeField] GameObject gameOver;   // GameOver ゲームオブジェクト参照
     [SerializeField] GameObject result;     // Result ゲームオブジェクト参照
     [SerializeField] GameObject spawners;   // Spawner ゲームオブジェクト参照
@@ -92,6 +93,7 @@ public class GameStateController : MonoBehaviour
         {
             // spawnersを表示
             Controller.spawners.SetActive(true);
+            Controller.gameUI.SetActive(true);
         }
         public override StateAction OnUpdate()
         {
@@ -107,6 +109,7 @@ public class GameStateController : MonoBehaviour
         {
             // 敵の発生を止める
             Controller.spawners.SetActive(false);
+            //Controller.gameUI.SetActive(false);
         }
     }
 
@@ -124,7 +127,7 @@ public class GameStateController : MonoBehaviour
         {
             timer += Time.deltaTime;
             // 2秒後に次へ
-            if (timer > 2.0f)
+            if (timer > 2.5f)
             {
                 return StateAction.STATE_ACTION_NEXT;
             }
@@ -133,7 +136,7 @@ public class GameStateController : MonoBehaviour
         public override void OnExit()
         {
             // ゲームオーバーを非表示
-            Controller.gameOver.SetActive(false);
+            //Controller.gameOver.SetActive(false);
         }
     }
 

@@ -755,6 +755,10 @@
       <Project>{2B2867DD-F2A1-A4B0-C15C-4FF30F0FA1A2}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="CopoCopo.TextMeshProAnimator.Runtime.csproj">
+      <Project>{918FE5E7-886F-4995-F85D-2F1B957DB389}</Project>
+      <Name>CopoCopo.TextMeshProAnimator.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

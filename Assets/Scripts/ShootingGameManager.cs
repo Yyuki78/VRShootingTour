@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ShootingGameManager : MonoBehaviour
 {
@@ -34,6 +36,12 @@ public class ShootingGameManager : MonoBehaviour
 
     private int gameStop = 5;
 
+    //UI
+    [SerializeField] TextMeshProUGUI _timerNameText;
+    [SerializeField] TextMeshProUGUI _timerText;
+    [SerializeField] TextMeshProUGUI _brokeText;
+    [SerializeField] TextMeshProUGUI _brokeNumText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +55,17 @@ public class ShootingGameManager : MonoBehaviour
                 LimitTime = _manager.LimitTime;
                 GeneNum = _manager.MaxAppearances;
                 Size = _manager.TargetSize;
+
+                _timerNameText.text = "残り時間";
+                _brokeText.text = "破壊数";
                 break;
             case 2:
                 LimitNum = _manager.LimitNum;
                 GeneNum = _manager.MaxAppearances2;
                 Size = _manager.TargetSize2;
+
+                _timerNameText.text = "経過時間";
+                _brokeText.text = "残り";
                 break;
             case 3:
                 if (_manager.Cheat)
@@ -63,6 +77,9 @@ public class ShootingGameManager : MonoBehaviour
                 }
                 GeneNum = _manager.MaxAppearances3;
                 Size = _manager.TargetSize3;
+
+                _timerNameText.text = "経過時間";
+                _brokeText.text = "破壊数";
                 break;
             default:
                 Debug.Log("ゲームモードが不明です");
@@ -103,6 +120,8 @@ public class ShootingGameManager : MonoBehaviour
 
     private void updateRapidGame()
     {
+        _timerText.text = (LimitTime - timer).ToString("00");
+        _brokeNumText.text = breakNum.ToString("000");
         if (timer >= LimitTime)
         {
             //ゲーム終了
@@ -112,6 +131,8 @@ public class ShootingGameManager : MonoBehaviour
 
     private void updateQuantityGame()
     {
+        _timerText.text = timer.ToString("000");
+        _brokeNumText.text = (LimitNum - breakNum).ToString("000");
         if (breakNum >= LimitNum - GeneNum)
         {
             stopGenerate = true;
@@ -125,12 +146,13 @@ public class ShootingGameManager : MonoBehaviour
 
     private void updateInfinityGame()
     {
-
+        _timerText.text = timer.ToString("000");
+        _brokeNumText.text = breakNum.ToString("000");
     }
 
     private void updateQuitGame()
     {
-        if (timer >= 3600)
+        if (timer >= 999)
         {
             //ゲーム終了
             _state.FinishGame = true;
