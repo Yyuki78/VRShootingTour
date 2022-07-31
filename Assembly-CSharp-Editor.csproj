@@ -62,6 +62,12 @@
     <Compile Include="Assets\SAColliderBuilder\Editor\SAColliderBoxReducer.cs" />
     <Compile Include="Assets\SAColliderBuilder\Editor\SAColliderBuilderEditorCommon.cs" />
     <Compile Include="Assets\SAColliderBuilder\Editor\SAColliderHullReducer.cs" />
+    <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageChecker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\settings\PackageImportList_ShaderGraph.txt" />
+    <None Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageImportList.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
